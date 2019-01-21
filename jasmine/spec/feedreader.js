@@ -94,7 +94,7 @@ $(function() {
            });
         });
         it('there is at least a single entry element within the feed container', function() {
-        expect($('.feed .entry').length).toBeDefined();
+        expect($('.feed .entry').length).toBeGreaterThan(0);
         });
       });
 
@@ -108,13 +108,19 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         var prevFeedData;
          beforeEach(function(done){
            loadFeed(0, function() {
+             prevFeedData = $('.feed').html();
+             loadFeed(1, function(){
+               newFeedData = $('.feed').html();
             done();
           });
         });
+      });
         it('the content actually changes', function() {
         expect($('.entry')[0]).not.toBe($('.entry')[1]);
         });
       });
 }());
+
