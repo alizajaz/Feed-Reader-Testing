@@ -73,7 +73,9 @@ When you're all finished, write a `README` file detailing all steps required to 
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
-# My Contribution in this project
+
+
+# My Contribution to this project
 This project is about using Jasmine to write a number of tests against a pre-existing application. These are some of the guideline that i followed inorder to complete this project.
 
 Step 1.
