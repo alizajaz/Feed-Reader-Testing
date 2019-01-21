@@ -72,3 +72,79 @@ When you're all finished, write a `README` file detailing all steps required to 
 # Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+
+# My Contribution in this project
+This project is about using Jasmine to write a number of tests against a pre-existing application. These are some of the guideline that i followed inorder to complete this project.
+
+Step 1.
+```sh
+I start familialize about index.html,app.js,style.js,feedreader.js and of course review the Jasmine Documentation.
+
+```
+Step 2.
+```sh
+I know that i have to do something with feedreader.js inorder to change outcome. As given note: 
+         /* This is our first test - it tests to make sure that the
+         * allFeeds variable has been defined and that it is not
+         * empty. Experiment with this before you get started on
+         * the rest of this project. What happens when you change
+         * allFeeds in app.js to be an empty array and refresh the
+         * page?
+         */
+         since, they have already describe suite called 'RSS Feeds' so i added a spec with function it('are defined', function() {.At this point we just want to make sure allFeed variable is defined and has a length greater than 0.
+```
+
+Step 3.
+```sh
+    /* TODO: Write a test that loops through each feed
+         * in the allFeeds object and ensures it has a URL defined
+         * and that the URL is not empty.
+         */
+         
+         As you can see you have to loop through each feed. there are many ways to loop, however, i used allFeeds.forEach(function(feed){. here we have to focus on "URL". 
+         a. ensures it has a URL defined
+         b that the URL is not empty.
+         we can basically passed variable inside expect and check whether the variable is defined or not . Also, second line of code define the value of  length is greater than 0.
+        
+```
+Step 4.
+```sh
+ Write a test that loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.
+ (Similar to step 3 except chane the Url to name)
+ 
+```
+
+Step 5.
+```sh
+ /* TODO: Write a test that ensures the menu changes
+          * visibility when the menu icon is clicked. This test
+          * should have two expectations: does the menu display when
+          * clicked and does it hide when clicked again.
+          */
+          
+          for this, i went to console and see what happen when i click the menu icon first time and second time. What are the differences that you see during first click and second. I used jquery with hasClass method that return true or false.
+          
+ ```
+ Step 6.
+```sh
+    /* TODO: Write a test that ensures when the loadFeed
+           * function is called and completes its work, there is at least
+           * a single .entry element within the .feed container.
+           * Remember, loadFeed() is asynchronous so this test will require
+           * the use of Jasmine's beforeEach and asynchronous done() function.
+           */
+For this test I must load any feed using the ‘loadFeed()’ function and when loaded, I should check that there is at least one element with the class ‘entry’ within the element with the class ‘feed’.And the length of the entry should be greater than 0. 
+
+ ```
+ 
+  Step 7.
+```sh
+    /* TODO: Write a test that ensures when a new feed is loaded
+         * by the loadFeed function that the content actually changes.
+         * Remember, loadFeed() is asynchronous.
+         */
+
+Since evrey test is independent, i have to load two feeds such as prevFeedData and newFeedData . Also, loadFeed is asynchronous, any code that depends on its completion or that must run after its completion, must go within the callback function provied to loadFeed. When the call is done, and all feed are done loading then the tests are ready to go.
+ ```
+
+          
